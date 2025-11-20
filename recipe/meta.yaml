@@ -1,13 +1,13 @@
 {% set name = "xoak" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aa6e30ac9733a4e10b20d9a90cbfe987fcdd3e14b0b6e514392238cd54fad703
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: dcad57c35818926032beef2dc78ef7bd99349bfd427cd3a87699b91c976946d9
 
 build:
   noarch: python
