@@ -12,15 +12,16 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
-    - setuptools_scm
+    - hatchling
+    - hatch-vcs
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - dask
     - numpy
     - scipy
@@ -29,9 +30,14 @@ requirements:
 test:
   imports:
     - xoak
+  commands:
+    - pip check
+  requires:
+    - python {{ python_min }}
+    - pip
 
 about:
-  home: https://github.com/ESM-VFC/xoak
+  home: https://github.com/xarray-contrib/xoak
   license: MIT
   license_file: LICENSE
   summary: Xarray extension for selecting irregular, n-dimensional data.
