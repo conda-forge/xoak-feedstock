@@ -3,7 +3,7 @@ About xoak-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xoak-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ESM-VFC/xoak
+Home: https://github.com/xarray-contrib/xoak
 
 Package license: MIT
 
